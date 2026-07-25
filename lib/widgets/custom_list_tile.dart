@@ -15,7 +15,12 @@ class CustomListTile extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
         ),
         subtitle: Text(phoneNumber),
-        trailing: Icon(Icons.call, color: Colors.blue),
+        trailing: IconButton(
+          icon: Icon(Icons.call, color: Colors.blue),
+          onPressed: () {
+            print('Delete button pressed for $name');
+          },
+        ),
       ),
     );
   }
